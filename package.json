@@ -1,0 +1,47 @@
+{
+  "name": "EvdA11yNav",
+  "version": "0.0.1",
+  "description": "A fully accessible react navigation menu component",
+  "main": "dist/index.js",
+  "author": "Illai Zeevi (Evinced Inc.)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "scripts": {
+    "build": "eslint src/**/*.js && webpack --config webpack.config.js -p",
+    "eslint": "eslint src/**/*.js",
+    "start": "npm run eslint && webpack-dev-server --mode development --open --config webpack.config.js",
+    "transpile": "npm run eslint && babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "babel-polyfill": "^6.26.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
